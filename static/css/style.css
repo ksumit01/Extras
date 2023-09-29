@@ -1,0 +1,37 @@
+h1 {
+  color: rgb(248, 105, 105);
+  font-size: 60px;
+  text-align: center;
+}
+#mainMenu {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  height: 60vh;
+  justify-content: center;
+  width: 50vw;
+  font-size: 40px;
+  /* border: 2px solid red; */
+  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: rgb(230, 225, 225);
+  border-radius: 20px;
+  padding: 20px;
+}
+#mainMenu a {
+  text-decoration: none;
+  color: black;
+  margin: auto;
+  padding: 20px;
+}
+#mainMenu a:hover {
+  color: rgb(244, 4, 4);
+  background-color: white;
+  border-radius: 10px;
+}
+body {
+  background: #f4f4f4;
+}
+.navbar-brand {
+  color: red;
+}

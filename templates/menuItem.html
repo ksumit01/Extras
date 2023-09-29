@@ -1,0 +1,54 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>Add Item</h1>
+{% for message in get_flashed_messages() %}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>{{ message }}</strong>
+  <button
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-label="Close"
+  ></button>
+</div>
+{% endfor %}
+
+<form method="POST" action="/menu">
+  {{ form.hidden_tag() }}
+
+  <div class="form-group">
+    {{ form.name.label(class="form-control-label") }} {{
+    form.name(class="form-control", placeholder="Item Name") }}
+  </div>
+  <br />
+  <div class="form-group">
+    {{ form.description.label(class="form-control-label") }} {{
+    form.description(class="form-control", placeholder="Description") }}
+  </div>
+  <br />
+  <div class="form-group">
+    {{ form.price.label(class="form-control-label") }} {{
+    form.price(class="form-control", placeholder="Price") }}
+  </div>
+  <br />
+  <div class="form-group">
+    <strong>{{ form.availability.label(class="form-check-label") }}</strong>
+    <strong>{{ form.availability(class="form-check-input") }}</strong>
+  </div>
+
+  <!-- Add the quantity field -->
+  <div class="form-group">
+    {{ form.quantity.label(class="form-control-label") }} {{
+    form.quantity(class="form-control", type="number", placeholder="Quantity")
+    }}
+  </div>
+
+  <br />
+  <div style="text-align: center">
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </div>
+</form>
+
+<br /><br /><br />
+
+{% endblock %}

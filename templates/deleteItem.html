@@ -1,0 +1,16 @@
+{% extends 'base.html' %} 
+{% block content %}
+<h1>Delete Menu Item</h1>
+{% if flash_message %}
+<div class="alert alert-success">
+    {{ flash_message }}
+</div>
+{% endif %}
+<form method="POST" action="/delete_item">
+  {{ form.hidden_tag() }}
+  <div class="form-group">
+    {{ form.item_id.label(class="form-control-label") }} {{ form.item_id(class="form-control", placeholder="Item ID") }}
+  </div>
+  <button type="submit" class="btn btn-danger">Delete</button>
+</form>
+{% endblock %}

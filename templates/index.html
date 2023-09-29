@@ -1,0 +1,19 @@
+{%extends 'base.html'%} {% block content%}
+<h1>Welcome to Zomato</h1>
+<div id="mainMenu">
+
+    <a  href="{{url_for('viewMenu')}}"
+         >VIEW MENU</a>
+    <a  href="{{url_for('addItem')}}"
+        >ADD ITEMS</a>
+    <a  href="{{url_for('updateItem')}}"
+      >UPDATE ITEMS</a>
+    <a  href="{{url_for('deleteItem')}}"
+        >DELETE ITEMS</a>
+    
+      
+    
+     
+    
+</div>
+{% endblock %}
